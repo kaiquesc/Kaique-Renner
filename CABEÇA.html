@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaique Costa</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="topo">
+            <h1>KAIQUE COSTA</h1>
+            <p style="font-size: 15px;">Seja Bem-vindo! 🥰</p>
+            <nav class="menu">
+                <a href="javascript:void(0)" class="toggle-content" data-target="perfil-pessoal" style="font-size: 17px;">
+                    <i class="fas fa-user"></i> Perfil Pessoal
+                </a>
+                <a href="javascript:void(0)" class="toggle-content" data-target="perfil-profissional" style="font-size: 17px;">
+                    <i class="fas fa-briefcase"></i> Perfil Profissional
+                </a>
+                <a href="javascript:void(0)" class="toggle-content" data-target="projetos-adquiridos" style="font-size: 17px;">
+                    <i class="fas fa-trophy"></i> Conquistas Adquiridas
+                </a>
+            </nav>
+        </header>
+        
+        <section id="perfil-pessoal" class="content-section">
+            <h1>PERFIL PESSOAL</h1>
+            <div class="imagem-texto">
+                <img src="CF.png" alt="Imagem 1" class="format" style="border-radius: 10px;">
+                <p>Considero-me uma pessoa comunicativa e sociável, com uma profunda apreciação por atividades ao ar livre. Entre meus passatempos preferidos estão a prática de vôlei, as visitas ao shopping e as caminhadas ao longo da Orla do Gasômetro. Além disso, tenho um grande carinho por momentos passados com meus sobrinhos, pois desfruto imensamente da companhia de crianças.
+                Atualmente, estou em um processo significativo de autodescoberta e transição, do qual me encontro imerso há 9 meses e 12 dias. Este período tem sido fundamental para que eu possa explorar e redefinir minhas preferências pessoais, além de construir novas conexões e laços sociais. Estou aproveitando cada etapa desse processo para me conhecer melhor e adaptar-me às novas facetas da minha identidade.</p>
+            </div>
+        </section>
+
+        <section id="perfil-profissional" class="content-section">
+            <h1>PERFIL PROFISSIONAL</h1>
+            <div class="imagem-texto">
+                <img src="ksc.png" style="border-radius: 10px;">
+                <p>Minha aplicação de conhecimento é uma das minhas maiores competências em quesito de desenvolvimento profissional. 
+                    Destacando minha comunicação, minha habilidade de desenvolver planos rápidos para suprir as necessidades de 
+                    demandas cheias e corridas, conseguindo entregar no prazo e com excelência. A principal habilidade que adquiri ao 
+                    longo do tempo foi gestão de tempo, conseguindo organizar diversas tarefas ao mesmo tempo e entregando todas no prazo 
+                    solicitado, vindo à tona minha facilidade em adaptação a novos ambientes. Meu interesse em desenvolvimento profissional é em desenvolver-me mais, adquirindo novos conhecimentos através da minha 
+                    habilidade em desenvolver mais minha capacidade em questionar para tirar dúvidas, conseguindo maiores resultados para 
+                    minhas experiências profissionais, resultando em melhoria da comunicação, desenvolvimento em trabalho em equipe e 
+                    conduzindo melhor conflitos em meio de trabalho.</p>
+            </div>
+        </section>
+
+        <section id="projetos-adquiridos" class="content-section">
+            <h1>CONQUISTAS ADQUIRIDAS</h1>
+            <div class="imagem-texto">
+                <img src="img.png" class="image-small" style="border-radius: 10px;">
+                <p>Minhas conquistas tiveram um início significativo logo que ingressei na Fundação Tênis. O processo seletivo “Hackathon” representou um desafio considerável para mim, uma vez que nunca havia participado de apresentações formais ou interações sociais em um contexto tão intenso. Este evento marcou um ponto crucial em minha trajetória, pois, após um atropelamento, eu havia desenvolvido um receio de sair de casa e havia perdido o interesse em explorar novas pessoas e lugares.
+                     A Fundação Tênis desempenhou um papel vital em minha jornada de autodescoberta, permitindo-me explorar novos interesses e ampliar meus horizontes. Através de participações em projetos, tanto internos quanto externos à Fundação, pude vivenciar um crescimento pessoal e profissional significativo. Um exemplo marcante foi o projeto apresentado durante a entrega do segundo semestre, denominado BRASILIMPE TECH. Este projeto visa desenvolver um mecanismo de limpeza para o Brasil, facilitando a separação de resíduos em comunidades com acesso limitado para caminhões de lixo. Além disso, promove a geração de renda para os usuários e contribui para a melhoria da limpeza urbana.
+                     Em termos de conquistas pessoais, destaco o início do processo de autoaceitação e o desenvolvimento da inteligência emocional, que tem sido fundamental em minha trajetória. A Fundação Tênis forneceu um suporte inestimável, auxiliando-me na troca de nome, no início da hormonização e em muitos outros aspectos. A contribuição da Fundação Tênis para minha vida tem sido transformadora, ajudando-me a me conhecer melhor e a crescer tanto pessoal quanto profissionalmente. O acolhimento recebido foi crucial para esse progresso.
+                    À medida que concluo estes dois anos repletos de aprendizados, levo comigo o conhecimento adquirido e a paz de finalmente me reconhecer e aceitar como homem trans. A Fundação Tênis foi fundamental nesse processo e estou imensamente grato por todo o suporte recebido.</p>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle-content').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement.style.display === 'block') {
+                    targetElement.style.display = 'none';
+                } else {
+                    document.querySelectorAll('.content-section').forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    targetElement.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
